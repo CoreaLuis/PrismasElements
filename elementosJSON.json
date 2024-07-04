@@ -1,0 +1,15 @@
+{
+    //aca tengo informacion personal de cliente
+    customer.dcFirstNameCLI
+    customer.SecondNameCLI
+    customer.dcLastNameCLI
+    customer.dcSecondLastNameCLI
+    customer.dcFechaNacimiento
+    customer.dcGenero
+
+    //informacion del vehiculo
+    customer.dcConcesionarios
+    customer.dcMarcaAutoCLI
+    customer.dcTipoVehiculoCLI
+    customer.dcAnio
+}
