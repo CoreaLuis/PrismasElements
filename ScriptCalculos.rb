@@ -1,5 +1,5 @@
 # calculando edad 
-function validateAge(dcFechaNacimiento)
+function validateAge(dcFechaNacimiento) do
 # obtenemos la fecha actual
    fechaActual = date:now()
 
@@ -30,6 +30,8 @@ end
 return edad >= 21
 end
 
+set field esMayor with validateAge(field edad)
+
 # calculo seguro de vida panama
 function calcSeguroVida(edad) do 
     if val(edad) >= 31 and val(edad) < 55 then
@@ -56,3 +58,4 @@ function calPorcCPP
 end
 
 #
+

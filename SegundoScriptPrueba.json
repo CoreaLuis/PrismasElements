@@ -1,0 +1,87 @@
+{
+
+ "loan_number": "2222",
+
+ "opening_date": "{{customer.system:current-date():format-date("yyyy-MM-dd")}}",
+
+ "starting_date": "2024-07-05",
+
+ "term": {{customer.CRE_Plazo:as_int()}},
+
+ "frecuency_type": "Monthly",
+
+ "interest_rate": {{IF customer.procentaje_abono >= 10 and customer.procentaje_abono < 15 THEN "7" ELSE IF customer.procentaje_abono >= 15 and customer.procentaje_abono < 20 THEN "6.75" ELSE IF customer.procentaje_abono >= 20 THEN "6.50" ELSE "0" END}},
+
+ "currency_code": "USD",
+
+ "amount": {{customer.CRE_Montoprestamo:as_int()}},
+
+ "free_fees": 0,
+
+ "fee_type": "Full",
+
+ "life_insurance_fee": {{customer.CLI_Seguro_Vida}},
+
+ "credit_insurance_fee": 0,
+
+ "first_life_insurance_fee": 0,
+
+ "first_credit_insurance_fee": 0,
+
+ "flg_tcea": false,
+
+ "feci": {{ IF customer.CLI_Edad < = 55 THEN "1" ELSE "0" END}},
+
+ "other_fixed_charges": [
+
+  {
+
+   "description": "Fide",
+
+   "value": 2.14
+
+  },
+
+  {
+
+   "description": "Manejo",
+
+   "value": 1.5
+
+  },
+
+  {
+
+   "description": "ITMBS",
+
+   "value": 0.11
+
+  }
+
+ }
+
+}
+
+
+
+{{customer.CLI_Seguro_Vida}}
+
+{{customer.edad}}
+
+{{customer.CLI_Edad}}
+
+
+
+ "feci":{{ IF customer.CLI_Edad <= 55 THEN "1" ELSE "0" END}}
+
+
+
+
+
+ 
+
+
+
+
+
+ 
